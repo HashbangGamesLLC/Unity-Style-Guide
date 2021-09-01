@@ -1158,9 +1158,15 @@ Example:
 
 ```csharp
 public enum WeaponType { Knife, Gun }
-```
 
-  
+// Enum can have multiple values
+[Flags]
+public enum Dockings
+{
+	None = 0,
+	Top = 1
+}
+```
 
 ##### Arrays
 

@@ -827,7 +827,7 @@ Use a namespace to ensure your scoping of classes/enum/interface/etc won't confl
 
   
 
-Simply, any function that has an access modifier of Public should have its summary filled out.
+Simply, any function that has an access modifier of Public should have its summary filled out. Summaries should be minimum 3 lines with the top opening the summary and the bottom closing it.
 
   
 

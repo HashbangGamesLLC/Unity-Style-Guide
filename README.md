@@ -906,7 +906,7 @@ The // (two slashes) style of comment tags should be used in most situations. Wh
 
 ```csharp
 // Sample comment above a variable.
-private int _myInt = 5;
+private int myInt = 5;
 ```  
 
 #### Spacing

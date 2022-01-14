@@ -682,6 +682,16 @@ The naming of functions, events, and event dispatchers is critically important. 
 * What is its purpose?
 
 These questions and more can all be answered when functions are named appropriately.
+	
+#### `[UsedImplicitly]` Attribute
+If a function is called from outside the scope of the solution, it should have a `[UsedImplicitly]` attribute, to prevent "Remove unused code" refactor operations.
+
+Functions called from external sources may include:
+* A function called from a Unity Event via the Inspector
+* A function in a library intended to be exported as a DLL
+* A function in a class that will be exported as a Unity Package
+	
+Most IDEs will notify you by graying out the name of the function, along with a "Method is never used" hint.
 
 <a name="function-verbrule"></a>
 #### All Functions Should Be Verbs

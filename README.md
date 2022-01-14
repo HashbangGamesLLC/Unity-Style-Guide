@@ -366,23 +366,23 @@ Source files should be given the name of the public class in the file.
 
 Organize namespaces with a clearly defined structure,
 
-Class members should be alphabetized, and grouped into sections:
+Class members should be grouped into sections:
+
 * Constant Fields
 * Static Fields
-* Fields
-* Constructors
 * Properties
 * Events / Delegates
+* Fields
+* Constructors
 * LifeCycle Methods (Awake, OnEnable, OnDisable, OnDestroy)
 * Public Methods
 * Private Methods
-* Nested types
 
 Within each of these groups order by access:
 * public
-* internal
 * protected
 * private
+	
 ```
 namespace ProjectName
 {

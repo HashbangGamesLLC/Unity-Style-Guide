@@ -384,55 +384,41 @@ Within each of these groups order by access:
 * private
 	
 ```
-namespace ProjectName
+namespace Name.Space
 {
-	/// <summary>  
-	/// Brief summary of what the class does
-	/// </summary>
+    /// <summary>  
+    /// Brief summary of what the class does
+    /// </summary>
     public class Account
     {
-      #region Fields
+        public const string SHIPPING_TYPE = "DropShip";
+    
+        public string Number {get; set;}
+        public DateTime DateOpened {get; set;}
+        public DateTime DateClosed {get; set;}
+        public decimal Balance {get; set;}
+    
+        [Tooltip("Public variables set in the Inspector, should have a Tooltip")]
+        public static string bankName;
       
-      [Tooltip("Public variables set in the Inspector, should have a Tooltip")]
-      public static string BankName;
-      
-	  /// <summary>  
-	  /// They should also have a summary
-	  /// </summary>
-      public static decimal Reserves;
+        /// <summary>  
+	/// They should also have a summary
+	/// </summary>
+        public static decimal reserves;
  
-	  public string BankName;
-	  public const string ShippingType = "DropShip";
+	public string BankName;
 	  
-	  private float _timeToDie;
+	private float _timeToDie;
 	  
-	  #endregion
-	  
-	  #region Properties
-	  
-      public string Number {get; set;}
-      public DateTime DateOpened {get; set;}
-      public DateTime DateClosed {get; set;}
-      public decimal Balance {get; set;}
-            
-	  #endregion
-	 
-	  #region LifeCycle
-	  
-      public Awake()
-      {
-        // ...
-      }
+        public Awake()
+        {
+            // ...
+        }
       
-      #endregion
-	  #region Public Methods
-	  
-      public AddObjectToBank()
-      {
-        // ...
-      }
-      
-      #endregion
+        public AddObjectToBank()
+        {
+          // ...
+        }
     }
 }
 ```

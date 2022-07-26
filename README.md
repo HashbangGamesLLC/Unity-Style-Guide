@@ -430,6 +430,20 @@ To save some time you can overwrite Unity's default script template with your ow
 #### Namespace
 Use a namespace to ensure your scoping of classes/enum/interface/etc won't conflict with existing ones from other namespaces or the global namespace. The project should at minimum use the projects name for the Namespace to prevent conflicts with any imported Third Party assets.
 
+`using` statements should always be placed *outside* of your namespace declaration, like so:
+
+```
+using System;
+
+namespace Foo
+{
+    public class Bar
+    {
+        ...
+    }
+}
+```
+
 #### All Public Functions Should Have A Summary
 
 Simply, any function that has an access modifier of Public should have its summary filled out. 
@@ -457,9 +471,9 @@ To create Foldout Groups there are 2 options in Unity.
 ```
 [[Serializable](https://docs.unity3d.com/ScriptReference/Serializable.html)]
 public struct PlayerStats
-	{
-        public int MovementSpeed;
-    }
+{
+    public int MovementSpeed;
+}
     
 [FoldoutGroup("Interactable")]
 public int MovementSpeed = 1;
